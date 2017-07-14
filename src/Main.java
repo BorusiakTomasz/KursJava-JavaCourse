@@ -1,15 +1,16 @@
-import oop.D009_14_07.Circle;
+import oop.D009_14_07.Firma;
+import oop.D009_14_07.Pracownik;
 
 /**
  * Created by Miver on 2017-07-13.
  */
 public class Main {
     public static void main(String[] args) {
-        Circle circle = new Circle();
+        Firma firma = new Firma();
+        Pracownik pracownik = new Pracownik();
 
-        circle.getRadius();
-        System.out.println("Pole kola wynosi: " + circle.area());
-        System.out.println("Obwod kola wynosi: " + circle.field());
-        circle.showRadius();
+        firma.setPracownik(pracownik);
+
+        firma.getPracownicyFirmy();
     }
 }
