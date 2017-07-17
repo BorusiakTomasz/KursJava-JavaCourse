@@ -27,15 +27,20 @@ public class Pracownik {
         System.out.println("Podaj dane pracownika");
         System.out.println("Imie");
         osoba.imie = sc.nextLine();
+
         System.out.println("Nazwisko");
         osoba.nazwisko = sc.nextLine();
+
         System.out.println("Placa");
         osoba.placa = sc.nextInt();
+
         System.out.println("Plec");
         osoba.plec = sc.next().charAt(0);
+
         System.out.println("Dzial");
         osoba.dzial = sc.nextInt();
         System.out.println();
+
         return osoba;
     }
 
@@ -46,5 +51,13 @@ public class Pracownik {
         System.out.println("Plec: " + plec);
         System.out.println("Dzial: " + dzial);
         System.out.println();
+    }
+
+    void delPracownik() {
+        imie = null;
+        nazwisko = null;
+        placa = 0;
+        plec = ' ';
+        dzial = 0;
     }
 }
