@@ -33,10 +33,12 @@ public class Main {
                     firma.setPracownikFirmy(pracownik);
                     break;
                 case 3:
-                    firma.delPracownikFirmy(pracownik);
+                    System.out.println("Podaj ID pracownika");
+                    firma.delPracownikFirmy(sc.nextInt());
                     break;
                 case 4:
-                    firma.getPracownicyFirmy(pracownik);
+                    System.out.println("Podaj ID pracownika");
+                    firma.getPracownicyFirmy(sc.nextInt());
                     break;
                 case 0:
                     exit = true;

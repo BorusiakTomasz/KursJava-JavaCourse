@@ -22,16 +22,9 @@ public class Firma {
         }
     }
 
-    public void getPracownicyFirmy(Pracownik osoba) {
-        boolean flag = false;
-        for (Pracownik i : pracownicy)
-            if (osoba == i) {
-                flag = true;
-                i.delPracownik();
-                break;
-            }
-        if (!flag)
-            System.out.println("Brak takiego pracownika");
+    public void getPracownicyFirmy(int id) {
+        if (id < LiczbaPracownikow && id >= 0)
+            pracownicy[id].getPracownik();
     }
 
     public void setPracownikFirmy(Pracownik osoba) {
@@ -39,13 +32,8 @@ public class Firma {
         LiczbaPracownikow++;
     }
 
-    public void delPracownikFirmy(Pracownik osoba) {
-        for (Pracownik i : pracownicy) {
-            if (osoba == i) {
-                i.delPracownik();
-                LiczbaPracownikow--;
-                break;
-            }
-        }
+    public void delPracownikFirmy(int id) {
+        pracownicy[id] = null;
+        LiczbaPracownikow--;
     }
 }

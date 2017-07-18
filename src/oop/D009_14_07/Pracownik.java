@@ -52,12 +52,4 @@ public class Pracownik {
         System.out.println("Dzial: " + dzial);
         System.out.println();
     }
-
-    void delPracownik() {
-        imie = null;
-        nazwisko = null;
-        placa = 0;
-        plec = ' ';
-        dzial = 0;
-    }
 }
