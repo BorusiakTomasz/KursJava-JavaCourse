@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class Pracownik {
     private String imie; //name
     private String nazwisko; //surName
+    private int wiek;
     private int placa; //salary
     private char plec; //sex
     private int dzial; //section
@@ -15,9 +16,34 @@ public class Pracownik {
     public Pracownik() {
         imie = null;
         nazwisko = null;
+        wiek = 0;
         placa = 0;
         plec = ' ';
         dzial = 0;
+    }
+
+    public String getImie() {
+        return imie;
+    }
+
+    public String getNazwisko() {
+        return nazwisko;
+    }
+
+    public int getWiek() {
+        return wiek;
+    }
+
+    public int getPlaca() {
+        return placa;
+    }
+
+    public char getPlec() {
+        return plec;
+    }
+
+    public int getDzial() {
+        return dzial;
     }
 
     Pracownik setPracownik() {
@@ -30,6 +56,9 @@ public class Pracownik {
 
         System.out.println("Nazwisko");
         osoba.nazwisko = sc.nextLine();
+
+        System.out.println("Wiek");
+        osoba.wiek = sc.nextInt();
 
         System.out.println("Placa");
         osoba.placa = sc.nextInt();
@@ -47,6 +76,7 @@ public class Pracownik {
     void getPracownik() {
         System.out.println("Imie: " + imie);
         System.out.println("Nazwisko: " + nazwisko);
+        System.out.println("Wiek: " + wiek);
         System.out.println("Placa: " + placa);
         System.out.println("Plec: " + plec);
         System.out.println("Dzial: " + dzial);
