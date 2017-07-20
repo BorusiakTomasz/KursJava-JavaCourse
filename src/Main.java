@@ -1,4 +1,5 @@
-import oop.D013_20_07.BinomialSolver;
+import oop.D013_20_07.inheritance.Person;
+import oop.D013_20_07.inheritance.Pracownik;
 
 import java.util.Scanner;
 
@@ -8,25 +9,21 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        Person p = new Person();
 
-        System.out.println("Podaj wielomian: Ax^2 + Bx + C");
+        System.out.println("Podaj imie");
+        String name = sc.next();
 
-        System.out.println("A:");
-        double a = sc.nextDouble();
+        System.out.println("Podaj nazwisko");
+        String surName = sc.next();
 
-        System.out.println("B:");
-        double b = sc.nextDouble();
+        System.out.println("Podaj wiek");
+        int age = sc.nextInt();
 
-        System.out.println("C:");
-        double c = sc.nextDouble();
+        p.setName(name);
+        p.setSurName(surName);
+        p.setAge(age);
 
-        BinomialSolver bs = new BinomialSolver(a, b, c);
-        System.out.println();
-
-        bs.count();
-        System.out.println();
-
-        System.out.println("Oblicz wielomian dla x");
-        System.out.println(bs.calculate(sc.nextDouble()));
+        System.out.println("Czesc, jestem " + p.getName() + " " + p.getSurName() + " i mam " + p.getAge() + "lat.");
     }
 }
