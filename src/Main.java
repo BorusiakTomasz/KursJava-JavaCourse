@@ -1,5 +1,4 @@
 import oop.D013_20_07.inheritance.Person;
-import oop.D013_20_07.inheritance.Pracownik;
 
 import java.util.Scanner;
 

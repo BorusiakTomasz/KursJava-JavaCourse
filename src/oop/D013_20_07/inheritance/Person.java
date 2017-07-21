@@ -7,10 +7,9 @@ public class Person {
     private String name;
     private String surName;
     private int age;
+    private int pesel;
 
-    public Person() {
-
-    }
+    public Person() {}
 
     public String getName() {
         return name;
@@ -34,5 +33,30 @@ public class Person {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public int getPesel() {
+        return pesel;
+    }
+
+    public void setPesel(int pesel) {
+        this.pesel = pesel;
+    }
+
+    @Override
+    public String toString() {
+        return "Jestem osoba i nazywam sie: " + name + " " + surName + " i mam " + age + "lat.";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) //czy te obiekty sa w tym samym obszarze pamieci
+            return true;
+        boolean czyRowne = false;
+        if (obj instanceof Person) {
+            Person osoba = (Person) obj;
+            czyRowne = this.pesel == osoba.pesel;
+        }
+        return czyRowne;
     }
 }
