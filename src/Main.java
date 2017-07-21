@@ -1,4 +1,6 @@
 import oop.D014_21_07.Punkt3D;
+import oop.D014_21_07.Interfaces.Czworokat;
+import oop.D014_21_07.Interfaces.Prostokat;
 
 import java.util.Scanner;
 
@@ -11,5 +13,8 @@ public class Main {
         Punkt3D p3d = new Punkt3D(1, 1, 1);
 
         p3d.showAll();
+
+        Czworokat p = new Prostokat();
+        p.getWymiar();
     }
 }
