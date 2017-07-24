@@ -4,7 +4,7 @@ package oop.D012_19_07.specialTask;
  * Created by Miver on 2017-07-24.
  */
 public class Trapez extends Figura {
-    private double dolnaPodstawa, gornaPodstawa, lewyBok_boki, prawyBok_wysokosc;
+    private double gornaPodstawa, lewyBok_boki, prawyBok_wysokosc;
 
     public Trapez(double dolnaPodstawa, double gornaPodstawa, double lewyBok_boki, double prawyBok_wysokosc) {
         super(dolnaPodstawa);
@@ -14,13 +14,13 @@ public class Trapez extends Figura {
     }
 
     @Override
-    public double obliczPole() { return (dolnaPodstawa + gornaPodstawa) * prawyBok_wysokosc / 2; }
+    public double obliczPole() { return (getA() + gornaPodstawa) * prawyBok_wysokosc / 2; }
 
     @Override
     public double obliczObwod() {
         if(prawyBok_wysokosc != 0)
-            return dolnaPodstawa + gornaPodstawa + lewyBok_boki + prawyBok_wysokosc;
+            return getA() + gornaPodstawa + lewyBok_boki + prawyBok_wysokosc;
         else
-            return dolnaPodstawa + gornaPodstawa + 2*lewyBok_boki;
+            return getA() + gornaPodstawa + 2*lewyBok_boki;
     }
 }

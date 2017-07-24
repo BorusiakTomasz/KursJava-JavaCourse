@@ -8,6 +8,10 @@ public abstract class Figura {
 
     protected Figura(double a) { this.a = a; }
 
+    public double getA() {
+        return a;
+    }
+
     public abstract double obliczPole();
 
     public abstract double obliczObwod();
