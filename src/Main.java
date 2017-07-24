@@ -37,8 +37,9 @@ public class Main {
                     double r = sc.nextDouble();
 
                     fig[0] = new Kolo(r);
-                    fig[0].obliczPole();
-                    fig[0].obliczObwod();
+                    System.out.println(fig[0].obliczPole());
+                    System.out.println(fig[0].obliczObwod());
+                    System.out.println();
                     break;
                 case 2:
                     System.out.println("PROSTOKAT");
@@ -49,8 +50,9 @@ public class Main {
                     double b = sc.nextDouble();
 
                     fig[1] = new Prostokat(a, b);
-                    fig[1].obliczPole();
-                    fig[1].obliczObwod();
+                    System.out.println(fig[1].obliczPole());
+                    System.out.println(fig[1].obliczPole());
+                    System.out.println();
                     break;
                 case 3:
                     System.out.println("TRAPEZ");
@@ -65,8 +67,9 @@ public class Main {
                     double prawyBok_wysokosc = sc.nextDouble();
 
                     fig[2] = new Trapez(dolnaPodstawa, gornaPodstawa, lewyBok_boki, prawyBok_wysokosc);
-                    fig[2].obliczPole();
-                    fig[2].obliczObwod();
+                    System.out.println(fig[2].obliczPole());
+                    System.out.println(fig[2].obliczPole());
+                    System.out.println();
                     break;
                 default:
                     System.out.println("Nie napisalem tego jeszcze");
