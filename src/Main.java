@@ -16,9 +16,10 @@ public class Main {
 
         while(!exit) {
             System.out.println("Menu");
-            System.out.println("Oblicz kolo");
-            System.out.println("Oblicz prostokat");
-            System.out.println("Oblicz trapez");
+            System.out.println("0. Exit");
+            System.out.println("1. Oblicz kolo");
+            System.out.println("2. Oblicz prostokat");
+            System.out.println("3. Oblicz trapez");
             System.out.println();
 
             System.out.println("Ktory program chcesz uruchomic");
