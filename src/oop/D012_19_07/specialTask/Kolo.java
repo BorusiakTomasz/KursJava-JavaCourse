@@ -6,15 +6,11 @@ package oop.D012_19_07.specialTask;
 public class Kolo extends Figura{
     private double r;
 
-    public Kolo(double r) {
-        super(r);
-    }
+    public Kolo(double r) { super(r); }
 
-    public double obliczPole() {
-        return Math.PI * r * r;
-    }
+    @Override
+    public double obliczPole() { return Math.PI * r * r; }
 
-    public double obliczObwod() {
-        return 2 * Math.PI * r;
-    }
+    @Override
+    public double obliczObwod() { return 2 * Math.PI * r; }
 }

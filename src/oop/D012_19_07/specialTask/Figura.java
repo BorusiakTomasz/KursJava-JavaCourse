@@ -3,27 +3,12 @@ package oop.D012_19_07.specialTask;
 /**
  * Created by Miver on 2017-07-19.
  */
-abstract class Figura {
+public abstract class Figura {
     private double a;
 
-    protected Figura() {
-        this.a = 0;
-    }
+    protected Figura(double a) { this.a = a; }
 
-    protected Figura(double a) {
-        this();
-        this.a = a;
-    }
+    public abstract double obliczPole();
 
-    protected double getA() {
-        return a;
-    }
-
-    protected void setA(double a) {
-        this.a = a;
-    }
-
-    abstract double obliczPole();
-
-    abstract double obliczObwod();
+    public abstract double obliczObwod();
 }
