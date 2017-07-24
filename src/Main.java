@@ -22,11 +22,17 @@ public class Main {
             System.out.println("2. Oblicz prostokat");
             System.out.println("3. Oblicz trapez");
             System.out.println("4. Wypisz wyniki");
+            System.out.println("5. Kasownia tablicy");
             System.out.println();
 
             System.out.println("Ktora figure chcesz obliczyc (max 10 figur)");
             byte x = sc.nextByte();
             System.out.println();
+
+            if (liczbaFigur == 9) {
+                System.out.println("Nie moge tego wykonac z powodu zapelnienia tablicy");
+                x = 4;
+            }
 
             switch (x) {
                 case 0:
@@ -84,6 +90,14 @@ public class Main {
                         System.out.println("Obwod: "+fig[i].obliczObwod());
                         System.out.println();
                     }
+                    break;
+                case 5:
+                    for (int i = 0; i < liczbaFigur; i++) {
+                        fig[i] = null;
+                    }
+                    liczbaFigur = 0;
+
+                    System.out.println("Tablica skasowana");
                     break;
                 default:
                     System.out.println("Nie napisalem tego jeszcze");
