@@ -29,7 +29,7 @@ public class Main {
             byte x = sc.nextByte();
             System.out.println();
 
-            if (liczbaFigur == 9) {
+            if (liczbaFigur > 9) {
                 System.out.println("Nie moge tego wykonac z powodu zapelnienia tablicy");
                 x = 4;
             }
