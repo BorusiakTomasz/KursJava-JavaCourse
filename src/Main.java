@@ -11,7 +11,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Figura[] fig = new Figura[3];
+        Figura[] fig = new Figura[10];
+        int liczbaFigur = 0;
         boolean exit = false;
 
         while(!exit) {
@@ -20,14 +21,16 @@ public class Main {
             System.out.println("1. Oblicz kolo");
             System.out.println("2. Oblicz prostokat");
             System.out.println("3. Oblicz trapez");
+            System.out.println("4. Wypisz wyniki");
             System.out.println();
 
-            System.out.println("Ktory program chcesz uruchomic");
+            System.out.println("Ktora figure chcesz obliczyc (max 10 figur)");
             byte x = sc.nextByte();
             System.out.println();
 
             switch (x) {
                 case 0:
+                    System.out.println("The end");
                     exit = true;
                     break;
                 case 1:
@@ -36,9 +39,10 @@ public class Main {
                     System.out.println("Podaj promien");
                     double r = sc.nextDouble();
 
-                    fig[0] = new Kolo(r);
-                    System.out.println("Pole: "+fig[0].obliczPole());
-                    System.out.println("Obwod: "+fig[0].obliczObwod());
+                    fig[liczbaFigur] = new Kolo(r);
+                    System.out.println("Pole: "+fig[liczbaFigur].obliczPole());
+                    System.out.println("Obwod: "+fig[liczbaFigur].obliczObwod());
+                    liczbaFigur++;
                     System.out.println();
                     break;
                 case 2:
@@ -49,9 +53,10 @@ public class Main {
                     System.out.println("Podaj B:");
                     double b = sc.nextDouble();
 
-                    fig[1] = new Prostokat(a, b);
-                    System.out.println("Pole: "+fig[1].obliczPole());
-                    System.out.println("Obwod: "+fig[1].obliczObwod());
+                    fig[liczbaFigur] = new Prostokat(a, b);
+                    System.out.println("Pole: "+fig[liczbaFigur].obliczPole());
+                    System.out.println("Obwod: "+fig[liczbaFigur].obliczObwod());
+                    liczbaFigur++;
                     System.out.println();
                     break;
                 case 3:
@@ -66,10 +71,19 @@ public class Main {
                     System.out.println("Podaj dlugosc prawegoBoku, badz wysokosc");
                     double prawyBok_wysokosc = sc.nextDouble();
 
-                    fig[2] = new Trapez(dolnaPodstawa, gornaPodstawa, lewyBok_boki, prawyBok_wysokosc);
-                    System.out.println("Pole: "+fig[2].obliczPole());
-                    System.out.println("Obwod: "+fig[2].obliczObwod());
+                    fig[liczbaFigur] = new Trapez(dolnaPodstawa, gornaPodstawa, lewyBok_boki, prawyBok_wysokosc);
+                    System.out.println("Pole: "+fig[liczbaFigur].obliczPole());
+                    System.out.println("Obwod: "+fig[liczbaFigur].obliczObwod());
+                    liczbaFigur++;
                     System.out.println();
+                    break;
+                case 4:
+                    for(int i = 0; i < liczbaFigur; i++) {
+                        fig[i].opisz();
+                        System.out.println("Pole: "+fig[i].obliczPole());
+                        System.out.println("Obwod: "+fig[i].obliczObwod());
+                        System.out.println();
+                    }
                     break;
                 default:
                     System.out.println("Nie napisalem tego jeszcze");

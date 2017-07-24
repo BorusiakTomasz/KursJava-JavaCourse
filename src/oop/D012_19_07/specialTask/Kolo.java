@@ -11,4 +11,9 @@ public class Kolo extends Figura{
 
     @Override
     public double obliczObwod() { return 2 * Math.PI * getA(); }
+
+    @Override
+    public void opisz() {
+        System.out.println("Kolo");
+    }
 }

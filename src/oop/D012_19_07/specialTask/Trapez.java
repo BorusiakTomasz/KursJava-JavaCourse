@@ -23,4 +23,9 @@ public class Trapez extends Figura {
         else
             return getA() + gornaPodstawa + 2*lewyBok_boki;
     }
+
+    @Override
+    public void opisz() {
+        System.out.println("Trapez");
+    }
 }

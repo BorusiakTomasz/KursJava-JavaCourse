@@ -16,4 +16,9 @@ public class Prostokat extends Figura {
 
     @Override
     public double obliczObwod() { return (2 * getA()) + (2 * b); }
+
+    @Override
+    public void opisz() {
+        System.out.println("Prostokat");
+    }
 }
