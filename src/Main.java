@@ -1,3 +1,6 @@
+import oop.D016_25_07.KontoOszeczednosciowe;
+import oop.D016_25_07.MaleKonto;
+
 import java.util.Scanner;
 
 /**
@@ -7,17 +10,20 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int[] arr = new int[] {1, 2, 3, 4, 5};
-
-        System.out.println("Podaj element ktory chcesz wyswietlic");
-        int numer = sc.nextInt();
+        KontoOszeczednosciowe mojeKonto = new KontoOszeczednosciowe(200);
 
         try {
-            System.out.println(arr[numer]);
-        } catch (IndexOutOfBoundsException ex) {
-            ex.printStackTrace();
-            System.out.println("Nie ma elementu tablicy o indexie: "+ex.getMessage());
-            System.out.println("Nie ma takiego indexu w tablicy, tablica posiada tylko: "+arr.length+" elementow");
+            mojeKonto.wyplata(500);
+        } catch (Exception e) {
+            System.out.println("Wystapil blad: "+e.getMessage());
+        }
+
+        KontoOszeczednosciowe mojeMaleKonto = new MaleKonto(1000, 500);
+
+        try {
+            mojeMaleKonto.wyplata(300);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
