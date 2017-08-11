@@ -1,6 +1,7 @@
 package RandomProject.D024_09_08;
 
 import RandomProject.D025_10_08.*;
+import RandomProject.D026_11_08.Degrees;
 import RandomProject.D026_11_08.Triangles;
 
 import java.util.ArrayList;
@@ -60,12 +61,15 @@ public class Grafs {
 
 //        transformAtoS(4);
 
-        triangleFinder(4);
+//        triangleFinder(4);
+
+        graphDegree(12);
     }
 
     public static void transformAtoE(int n, double p) {
         boolean[][] a = GraphGnp.generateGNP(n, p);
         PrintStructures.printA(a);
+        System.out.println();
         Edge[] e = Transforms.transformAtoE(a, n);
         PrintStructures.printE(e);
     }
@@ -83,6 +87,7 @@ public class Grafs {
     public static void transformaEtoA(int n, int k){
         Edge[] result = GraphGnk.generateGNK(n,k);
         PrintStructures.printE(result);
+        System.out.println();
         boolean[][] a = Transforms.transformEtoA(n,result,k);
         PrintStructures.printA(a);
     }
@@ -95,6 +100,7 @@ public class Grafs {
     public static void transformAtoS(int n) {
         boolean[][] a = GraphGnp.generateGNP(n, 0.5);
         PrintStructures.printA(a);
+        System.out.println();
         StructS[] result = Transforms.transformAtoS(a, n);
         PrintStructures.printStructS(result);
     }
@@ -102,10 +108,21 @@ public class Grafs {
     public static void triangleFinder(int n) {
         boolean[][] a = GraphGnp.generateGNP(n, 0.8);
         PrintStructures.printA(a);
+        System.out.println();
         int triangles = Triangles.countTriangles(a, n);
         PrintStructures.printString("Liczba trojkatow: " + triangles);
     }
 
+    public static void graphDegree(int n) {
+        boolean[][] a = GraphGnp.generateGNP(n, 0.5);
+        PrintStructures.printA(a);
+        System.out.println();
+        StructS[] s = Transforms.transformAtoS(a, n);
+        int result = Degrees.getGraphDegree(s);
+        PrintStructures.printStructS(s);
+        System.out.println();
+        PrintStructures.printString(Integer.toString(result));
+    }
 
     /* Moje wypociny
     Scanner sc = new Scanner(System.in);
