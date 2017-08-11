@@ -84,4 +84,39 @@ public class List {
             }
         }
     }
+
+    //Przepinamy lapki
+    public void bubbleSort() {
+        boolean isSorted = false;
+
+        while (!isSorted) {
+            ListElement current = this.first;
+            isSorted = true;
+
+            if (current != null) {
+                ListElement next = this.first.getNext();
+
+                while (next != null) {
+                    if (current.getValue() > next.getValue()) {
+                        next.setPrev(current.getPrev());
+                        current.setPrev(next);
+                        current.setNext(next.getNext());
+                        next.setNext(current);
+                        if (current.getNext() != null)
+                            current.getNext().setPrev(current);
+                        if (next.getPrev() != null)
+                            next.getPrev().setNext(next);
+                        else
+                            this.first = next;
+
+                        next = current.getNext();
+                        isSorted = false;
+                    } else {
+                        current = current.getNext();
+                        next = next.getNext();
+                    }
+                }
+            }
+        }
+    }
 }
