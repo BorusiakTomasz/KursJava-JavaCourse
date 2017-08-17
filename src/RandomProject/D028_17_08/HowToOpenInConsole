@@ -1,0 +1,2 @@
+D:\KursJava\src>javac Hello.java
+D:\KursJava\src>java -cp . Hello
